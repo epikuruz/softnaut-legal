@@ -1,8 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- ship-assembled.svg — 1024×1024 logo template -->
-<!-- Brand vars: --bg  --hull  --mast  --sail
-                 --mast-stroke  --sail-stroke  --hull-stroke
-                 (text contour controlled by TEXT_STROKE in text-overlay.svg) -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
   <style>
     /* Bystronaut neutral defaults — override :root vars to re-brand */
