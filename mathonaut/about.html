@@ -3,10 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About Mathonaut — Mental Math Trainer by Bystronaut</title>
+<title>Mathonaut — Math Coach</title>
 <style>
-  :root { color-scheme: light dark; }
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
@@ -26,33 +24,34 @@
   nav a { color: #888; text-decoration: none; }
   nav a:hover { text-decoration: underline; }
 
+  /* ── Hero ── */
   .hero {
     text-align: center;
     padding: 3rem 1.5rem 2.5rem;
   }
 
   .hero-icon {
-    width: 120px;
-    height: 120px;
-    border-radius: 26px;
+    width: 110px;
+    height: 110px;
+    border-radius: 24px;
     display: block;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1.4rem;
     box-shadow: 0 8px 40px rgba(61,200,192,0.3);
   }
 
   .hero h1 {
-    font-size: 2.75rem;
+    font-size: 2.6rem;
     font-weight: 800;
     letter-spacing: -0.03em;
     color: #F2F8FF;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
   }
 
   .hero .tagline {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: #3DC8C0;
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
   }
 
   .hero .desc {
@@ -60,71 +59,92 @@
     margin: 0 auto 2rem;
     color: #A8C0D8;
     font-size: 1.05rem;
+    line-height: 1.65;
   }
 
-  .store-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 0.5rem;
-  }
-
-  .store-btn {
-    display: inline-block;
-    background: #3DC8C0;
-    color: #0F0E2A;
+  /* ── Download block — QR + button merged ── */
+  .download-block {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    background: rgba(61,200,192,0.08);
+    border: 1px solid rgba(61,200,192,0.3);
+    border-radius: 16px;
+    overflow: hidden;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 0.9rem;
-    padding: 0.65rem 1.4rem;
-    border-radius: 10px;
-    letter-spacing: 0.01em;
-    transition: background 0.15s;
+    transition: background 0.15s, border-color 0.15s;
+    max-width: 340px;
   }
-  .store-btn:hover { background: #6EDBD5; color: #0F0E2A; }
-  .store-btn.secondary {
-    background: transparent;
-    border: 2px solid #3DC8C0;
-    color: #3DC8C0;
+  .download-block:hover {
+    background: rgba(61,200,192,0.14);
+    border-color: rgba(61,200,192,0.55);
   }
-  .store-btn.secondary:hover { background: rgba(61,200,192,0.12); }
 
+  .download-qr {
+    width: 84px;
+    height: 84px;
+    flex-shrink: 0;
+    display: block;
+    border-right: 1px solid rgba(61,200,192,0.2);
+  }
+
+  .download-text {
+    padding: 0 1.2rem;
+    text-align: left;
+  }
+  .download-text .label {
+    display: block;
+    font-size: 0.7rem;
+    color: #7A98B8;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.15rem;
+  }
+  .download-text .cta {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #F2F8FF;
+    line-height: 1.2;
+  }
+
+  /* ── Features grid ── */
   .features {
-    max-width: 760px;
+    max-width: 780px;
     margin: 3rem auto;
     padding: 0 1.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.1rem;
   }
 
   .feature-card {
     background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(61,200,192,0.15);
+    border: 1px solid rgba(61,200,192,0.12);
     border-radius: 14px;
-    padding: 1.4rem 1.25rem;
+    padding: 1.3rem 1.2rem;
   }
 
   .feature-card .icon {
-    font-size: 1.75rem;
-    margin-bottom: 0.6rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
     display: block;
   }
 
   .feature-card h3 {
-    font-size: 1rem;
+    font-size: 0.97rem;
     font-weight: 700;
     color: #F2F8FF;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.3rem;
   }
 
   .feature-card p {
-    font-size: 0.9rem;
+    font-size: 0.87rem;
     color: #7A98B8;
     line-height: 1.5;
   }
 
+  /* ── Sections ── */
   .section {
     max-width: 680px;
     margin: 0 auto;
@@ -132,7 +152,7 @@
   }
 
   .section h2 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
     color: #F2F8FF;
@@ -141,6 +161,7 @@
   .section p {
     color: #A8C0D8;
     margin-bottom: 0.75rem;
+    font-size: 0.97rem;
   }
 
   .section ul {
@@ -150,9 +171,9 @@
 
   .section ul li {
     color: #A8C0D8;
-    padding: 0.3rem 0 0.3rem 1.4rem;
+    padding: 0.25rem 0 0.25rem 1.4rem;
     position: relative;
-    font-size: 0.97rem;
+    font-size: 0.95rem;
   }
 
   .section ul li::before {
@@ -160,6 +181,61 @@
     position: absolute;
     left: 0;
     color: #3DC8C0;
+  }
+
+  /* ── Modes grid ── */
+  .modes {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .mode-pill {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(61,200,192,0.12);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+  }
+
+  .mode-pill strong {
+    display: block;
+    font-size: 0.9rem;
+    color: #F2F8FF;
+    margin-bottom: 0.15rem;
+  }
+
+  .mode-pill span {
+    font-size: 0.8rem;
+    color: #4A6080;
+  }
+
+  /* ── Free / Pro callout ── */
+  .pro-callout {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 1.5rem 2rem;
+  }
+
+  .pro-callout .box {
+    background: rgba(61,200,192,0.06);
+    border: 1px solid rgba(61,200,192,0.2);
+    border-radius: 14px;
+    padding: 1.25rem 1.4rem;
+  }
+
+  .pro-callout h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #3DC8C0;
+    margin-bottom: 0.4rem;
+  }
+
+  .pro-callout p {
+    font-size: 0.9rem;
+    color: #A8C0D8;
   }
 
   .divider {
@@ -186,68 +262,89 @@
 <section class="hero">
   <img src="./icon.svg" alt="Mathonaut icon" class="hero-icon">
   <h1>Mathonaut</h1>
-  <p class="tagline">Mental math speed trainer</p>
-  <p class="desc">Build real arithmetic speed by drilling the exact operations you find hardest — not the ones you already know cold.</p>
-  <div class="store-buttons">
-    <a href="https://apps.apple.com/app/mathonaut/id6736459991" class="store-btn">Download on the App Store</a>
-    <a href="./privacy.html" class="store-btn secondary">Privacy Policy</a>
-  </div>
-  <div style="margin-top:1.5rem;">
-    <img src="./qr-appstore.png" alt="Scan to download Mathonaut" style="width:120px;height:120px;border-radius:12px;">
-    <p style="margin-top:0.4rem;font-size:0.78rem;color:#4A6080;">Scan to download</p>
-  </div>
+  <p class="tagline">The trick behind every answer</p>
+  <p class="desc">Other apps mark answers right or wrong and move on. Mathonaut shows the mental shortcut behind every answer — and quietly fixes the exact topics that keep tripping your child up.</p>
+
+  <a class="download-block" href="https://apps.apple.com/app/mathonaut/id6736459991">
+    <img class="download-qr" src="./qr-appstore.png" alt="Scan to download">
+    <div class="download-text">
+      <span class="label">Available on</span>
+      <span class="cta">Download on the<br>App Store</span>
+    </div>
+  </a>
 </section>
 
 <div class="features">
   <div class="feature-card">
     <span class="icon">🎯</span>
-    <h3>Targets your weak spots</h3>
-    <p>Tracks your accuracy and speed per operation. Automatically focuses your sessions on the facts you get wrong or slow.</p>
+    <h3>Adaptive engine</h3>
+    <p>Tracks accuracy across every topic separately. Fraction division failing? It surfaces more. Decimal multiplication clicking? It backs off.</p>
   </div>
   <div class="feature-card">
-    <span class="icon">⚡</span>
-    <h3>Pure speed training</h3>
-    <p>Each drill is a timed race through a set of problems. Instant feedback after every answer keeps you in flow.</p>
+    <span class="icon">💡</span>
+    <h3>The mental shortcut</h3>
+    <p>Every wrong answer shows the full solution plus a shortcut: "×9 is ×10 minus one." Over hundreds of sessions those shortcuts become reflex.</p>
+  </div>
+  <div class="feature-card">
+    <span class="icon">📐</span>
+    <h3>Full curriculum, ages 5–15</h3>
+    <p>One slider covers the whole journey — from 2-digit addition at level 20 to negative exponents at level 80. They'll never outgrow it.</p>
   </div>
   <div class="feature-card">
     <span class="icon">📊</span>
-    <h3>Progress you can see</h3>
-    <p>Streaks, achievements, and per-operation stats show how your speed improves over time.</p>
+    <h3>Skill radar &amp; streaks</h3>
+    <p>See strongest and weakest topics at a glance. Daily streaks, accuracy charts, 12 achievements, level progression.</p>
   </div>
   <div class="feature-card">
     <span class="icon">🔒</span>
-    <h3>100% offline &amp; private</h3>
-    <p>No account, no tracking. All data lives on your device and never leaves it.</p>
+    <h3>No account. No ads.</h3>
+    <p>All stats live on your device. No tracking. Fully offline after first launch. 14 languages.</p>
   </div>
   <div class="feature-card">
-    <span class="icon">🔔</span>
-    <h3>Smart reminders</h3>
-    <p>Optional practice nudges scheduled locally on your device — never sent to a server.</p>
-  </div>
-  <div class="feature-card">
-    <span class="icon">♾️</span>
-    <h3>Mathonaut Pro</h3>
-    <p>Unlock the full operation set and advanced drill modes with a simple in-app subscription.</p>
+    <span class="icon">⚙️</span>
+    <h3>No parent setup</h3>
+    <p>No dashboard to maintain. The app adapts automatically — the more sessions, the more precisely it targets what needs work.</p>
   </div>
 </div>
 
 <hr class="divider">
 
 <div class="section">
-  <h2>Who is it for?</h2>
-  <p>Anyone who wants to be faster at mental arithmetic — students preparing for standardized tests, adults who want to sharpen a skill they once knew, or anyone who's curious how fast they can get.</p>
+  <h2>Six topic areas</h2>
   <ul>
-    <li>K–12 students building foundational fluency</li>
-    <li>Adults brushing up on multiplication and division</li>
-    <li>Competitive math students training for speed</li>
+    <li>Whole-number arithmetic — times tables, addition, subtraction, division</li>
+    <li>Decimals — all four operations</li>
+    <li>Fractions — adding, multiplying, simplifying, converting</li>
+    <li>Powers — exponents, negative and fractional exponents, exponent rules</li>
+    <li>Roots — square, cube, estimating, simplifying</li>
+    <li>Mixed expressions — order of operations (PEMDAS / BODMAS)</li>
   </ul>
 </div>
 
 <hr class="divider">
 
 <div class="section">
-  <h2>How it works</h2>
-  <p>Mathonaut runs short, focused drills — typically 30 to 60 seconds. After each drill, it records which problems you got right, wrong, or slow, and adjusts what you see next. Practice every day and the hardest problems become easy ones.</p>
+  <h2>Five training modes</h2>
+</div>
+<div class="modes">
+  <div class="mode-pill"><strong>Daily Challenge</strong><span>20 questions a day, builds your streak</span></div>
+  <div class="mode-pill"><strong>Unlimited</strong><span>Pure practice, no clock</span></div>
+  <div class="mode-pill"><strong>Timed</strong><span>Race against 60 seconds</span></div>
+  <div class="mode-pill"><strong>Sprint</strong><span>10 questions, race your best time</span></div>
+  <div class="mode-pill"><strong>Survival</strong><span>One wrong answer ends the round</span></div>
+</div>
+
+<hr class="divider">
+
+<div class="section" style="padding-bottom:1rem;">
+  <h2>Free &amp; Pro</h2>
+</div>
+<div class="pro-callout">
+  <div class="box">
+    <h3>Free forever</h3>
+    <p>Whole-number arithmetic plus Unlimited and Daily Challenge modes. No time limit, no paywall on the basics.</p>
+    <p style="margin-top:0.6rem;"><strong style="color:#F2F8FF;">Mathonaut Pro</strong> — fractions, decimals, powers, roots, mixed expressions, plus Timed, Sprint, and Survival modes.</p>
+  </div>
 </div>
 
 <hr class="divider">
