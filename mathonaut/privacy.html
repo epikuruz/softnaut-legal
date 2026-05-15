@@ -69,7 +69,7 @@
 <h2>Local notifications</h2>
 <p>After your first completed training session, Mathonaut asks for permission to send local practice reminders. If you grant permission, the app schedules reminders entirely on your device. No notification content, timing, or response is ever transmitted to us or to any third party. You can revoke permission at any time in your device's system settings.</p>
 
-<h2>AI Worksheet Grading (Pro feature)</h2>
+<h2>AI features (worksheet grading and topic detection)</h2>
 <p>Mathonaut Pro subscribers can use the <em>Grade with AI</em> feature to have a completed paper worksheet automatically graded. This feature works as follows:</p>
 <ul>
   <li><strong>Parent-initiated and voluntary.</strong> The feature is only activated when a parent or guardian explicitly taps "Grade with AI" and takes a photo. No photos are ever captured or sent without a deliberate action.</li>
@@ -81,6 +81,8 @@
   <li><strong>Sub-processors.</strong> For this feature, <strong>Amazon Web Services, Inc.</strong> acts as a sub-processor (AWS Data Processing Addendum applies). Anthropic's models run inside AWS infrastructure; Anthropic does not receive your data separately.</li>
 </ul>
 <p>If you do not use the Grade with AI feature, no photos are ever taken or transmitted by the app. On browsers that do not support barcode detection (e.g. Firefox), the upload is still only triggered by the parent's explicit tap — no automatic or background upload occurs.</p>
+
+<p><strong>Onboarding topic detection.</strong> During app setup, parents may optionally photograph their child's math textbook or notebook to automatically identify the current curriculum topic. The same technical safeguards apply as for worksheet grading: the action is parent-initiated (explicit tap required), the photo is compressed on-device before upload, and it is processed transiently by AWS Bedrock (Claude) — not stored after the response is returned. Only a cost record (no image, no content) is retained on our servers. Please take the photo at home of your child's own materials; do not photograph classroom environments or other students' work.</p>
 
 <h2>What we do not do</h2>
 <ul>
@@ -94,6 +96,7 @@
 <h2>Children's privacy</h2>
 <p>Mathonaut is designed for use by children under parental or guardian supervision. We do not knowingly collect personal information from children within the meaning of COPPA or GDPR. The anonymous analytics described above use a coarse age bracket (set by a parent or guardian in the app) and a random cohort ID — neither constitutes personal information under these laws.</p>
 <p>The <em>Grade with AI</em> feature is initiated by a parent or guardian, who photographs a printed paper worksheet. The worksheet contains only math exercises and a barcode — no photographs of children are taken or transmitted. The barcode verification step enforces this on supported browsers. We do not store the worksheet photo; only the grading result and an infrastructure cost record are retained.</p>
+<p>The <em>onboarding topic detection</em> feature is likewise initiated by a parent or guardian photographing a math textbook or notebook at home. Parents are instructed not to photograph classroom environments or other students' work. No image data is stored after processing.</p>
 <p>Parents and guardians can contact us at <a href="mailto:mathonaut.app@gmail.com">mathonaut.app@gmail.com</a> with any questions about data practices for their child's use of the app.</p>
 <p>EU and EEA residents: if you believe we have processed personal data of a child under the applicable digital consent age in your member state without proper authorisation, please contact us immediately.</p>
 
